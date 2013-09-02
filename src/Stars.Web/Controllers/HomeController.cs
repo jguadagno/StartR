@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stars.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,11 +9,16 @@ namespace Stars.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private IStarsDataSource _db;
+
+        public HomeController(IStarsDataSource db)
+        {
+            _db = db;
+        }
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
-            return View();
+            return View(_db.Clients);
         }
 
         public ActionResult About()
