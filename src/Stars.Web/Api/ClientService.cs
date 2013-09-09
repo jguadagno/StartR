@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Stars.Web.Api
 {
-    [Route("/clients")]
+    [Route("/clients", Summary=@"Gets all clients")]
     public class AllClients : IReturn<List<Client>> { }
 
     public class ClientService : Service
@@ -20,11 +20,7 @@ namespace Stars.Web.Api
         }
         public object Get(AllClients request)
         {
-            var list = new List<Client>();
-            list.Add(new Client() { FirstName = "Keith" });
-            return list;
+            return _db.Clients;
         }
-
-        
     }
 }

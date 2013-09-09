@@ -1,5 +1,5 @@
+using ServiceStack.Api.Swagger;
 using ServiceStack.WebHost.Endpoints;
-
 using Stars.Web.Api;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(Stars.Web.App_Start.AppHost), "Start")]
@@ -17,6 +17,8 @@ namespace Stars.Web.App_Start
 
             //Setup StructureMap as the IOC to use instead of Funq
             container.Adapter = new StructureMapContainerAdapter();
+
+            Plugins.Add(new SwaggerFeature());
 
             //TODO: Register your dependencies
             //ObjectFactory.Inject(typeof(IFoo), new Foo());
