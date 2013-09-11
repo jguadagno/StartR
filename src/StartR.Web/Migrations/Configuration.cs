@@ -5,14 +5,14 @@ namespace StartR.Web.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<StartR.Web.Infrastructure.StarsDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<StartR.Web.Infrastructure.StartRDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(StartR.Web.Infrastructure.StarsDb context)
+        protected override void Seed(StartR.Web.Infrastructure.StartRDb context)
         {
             //  This method will be called after migrating to the latest version.
 

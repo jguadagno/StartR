@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="IStarsDataSource.cs" />
+    <Compile Include="IStartRDataSource.cs" />
     <Compile Include="Lead.cs" />
     <Compile Include="Loan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

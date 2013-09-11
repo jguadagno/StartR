@@ -9,9 +9,9 @@ namespace StartR.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private IStarsDataSource _db;
+        private IStartRDataSource _db;
 
-        public HomeController(IStarsDataSource db)
+        public HomeController(IStartRDataSource db)
         {
             _db = db;
         }

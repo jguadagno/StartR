@@ -13,8 +13,8 @@ namespace StartR.Web.Api
 
     public class ClientService : Service
     {
-        private readonly IStarsDataSource _db;
-        public ClientService(IStarsDataSource db)
+        private readonly IStartRDataSource _db;
+        public ClientService(IStartRDataSource db)
         {
             _db = db;
         }

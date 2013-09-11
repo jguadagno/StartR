@@ -8,7 +8,7 @@ namespace StartR.Web.App_Start
     public class AppHost : AppHostBase
 	{		
 		public AppHost() //Tell ServiceStack the name and where to find your web services
-			: base("STARS API", typeof(ClientService).Assembly) { }
+			: base("StartR API", typeof(ClientService).Assembly) { }
 
 		public override void Configure(Funq.Container container)
 		{

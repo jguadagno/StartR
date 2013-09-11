@@ -29,7 +29,7 @@ namespace StartR.Web.DependencyResolution {
                                         scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });
-                            x.For<IStarsDataSource>().Use<StarsDb>();
+                            x.For<IStartRDataSource>().Use<StartRDb>();
                         });
             return ObjectFactory.Container;
         }
