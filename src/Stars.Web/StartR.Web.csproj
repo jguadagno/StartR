@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Stars.Web</RootNamespace>
-    <AssemblyName>Stars.Web</AssemblyName>
+    <RootNamespace>StartR.Web</RootNamespace>
+    <AssemblyName>StartR.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -293,24 +293,24 @@
     <Content Include="Scripts\knockout-2.3.0.debug.js" />
     <Content Include="Scripts\knockout-2.3.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Api\docs\css\hightlight.default.css" />
-    <Content Include="Api\docs\css\screen.css" />
-    <Content Include="Api\docs\images\logo_small.png" />
-    <Content Include="Api\docs\images\pet_store_api.png" />
-    <Content Include="Api\docs\images\throbber.gif" />
-    <Content Include="Api\docs\images\wordnik_api.png" />
-    <Content Include="Api\docs\index.html" />
-    <Content Include="Api\docs\lib\backbone-min.js" />
-    <Content Include="Api\docs\lib\handlebars-1.0.rc.1.js" />
-    <Content Include="Api\docs\lib\highlight.7.3.pack.js" />
-    <Content Include="Api\docs\lib\jquery-1.8.0.min.js" />
-    <Content Include="Api\docs\lib\jquery.ba-bbq.min.js" />
-    <Content Include="Api\docs\lib\jquery.slideto.min.js" />
-    <Content Include="Api\docs\lib\jquery.wiggle.min.js" />
-    <Content Include="Api\docs\lib\swagger.js" />
-    <Content Include="Api\docs\lib\underscore-min.js" />
-    <Content Include="Api\docs\swagger-ui.js" />
-    <Content Include="Api\docs\swagger-ui.min.js" />
+    <Content Include="docs\css\hightlight.default.css" />
+    <Content Include="docs\css\screen.css" />
+    <Content Include="docs\images\logo_small.png" />
+    <Content Include="docs\images\pet_store_api.png" />
+    <Content Include="docs\images\throbber.gif" />
+    <Content Include="docs\images\wordnik_api.png" />
+    <Content Include="docs\default.htm" />
+    <Content Include="docs\lib\backbone-min.js" />
+    <Content Include="docs\lib\handlebars-1.0.rc.1.js" />
+    <Content Include="docs\lib\highlight.7.3.pack.js" />
+    <Content Include="docs\lib\jquery-1.8.0.min.js" />
+    <Content Include="docs\lib\jquery.ba-bbq.min.js" />
+    <Content Include="docs\lib\jquery.slideto.min.js" />
+    <Content Include="docs\lib\jquery.wiggle.min.js" />
+    <Content Include="docs\lib\swagger.js" />
+    <Content Include="docs\lib\underscore-min.js" />
+    <Content Include="docs\swagger-ui.js" />
+    <Content Include="docs\swagger-ui.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -346,9 +346,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Stars.Domain\Stars.Domain.csproj">
+    <ProjectReference Include="..\Stars.Domain\StartR.Domain.csproj">
       <Project>{5b9c60b4-8138-4e0d-b0d6-e8bac4b32d5a}</Project>
-      <Name>Stars.Domain</Name>
+      <Name>StartR.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -7,8 +7,8 @@
     <ProjectGuid>{5B9C60B4-8138-4E0D-B0D6-E8BAC4B32D5A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Stars.Domain</RootNamespace>
-    <AssemblyName>Stars.Domain</AssemblyName>
+    <RootNamespace>StartR.Domain</RootNamespace>
+    <AssemblyName>StartR.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
