@@ -1,11 +1,11 @@
-﻿using Stars.Domain;
+﻿using StartR.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Stars.Web.Controllers
+namespace StartR.Web.Controllers
 {
     public class HomeController : Controller
     {

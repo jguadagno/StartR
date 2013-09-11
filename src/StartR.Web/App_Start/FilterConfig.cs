@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Stars.Web
+namespace StartR.Web
 {
     public class FilterConfig
     {

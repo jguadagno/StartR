@@ -18,7 +18,7 @@
 using System.Web.Http.Dependencies;
 using StructureMap;
 
-namespace Stars.Web.DependencyResolution
+namespace StartR.Web.DependencyResolution
 {
     /// <summary>
     /// The structure map dependency resolver.

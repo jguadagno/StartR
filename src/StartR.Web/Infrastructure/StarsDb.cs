@@ -1,11 +1,11 @@
-﻿using Stars.Domain;
+﻿using StartR.Domain;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Stars.Web.Infrastructure
+namespace StartR.Web.Infrastructure
 {
     public class StarsDb : DbContext, IStarsDataSource
     {

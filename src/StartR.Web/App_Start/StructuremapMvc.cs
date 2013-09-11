@@ -18,11 +18,11 @@
 using System.Web.Http;
 using System.Web.Mvc;
 using StructureMap;
-using Stars.Web.DependencyResolution;
+using StartR.Web.DependencyResolution;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof(Stars.Web.App_Start.StructuremapMvc), "Start")]
+[assembly: WebActivator.PreApplicationStartMethod(typeof(StartR.Web.App_Start.StructuremapMvc), "Start")]
 
-namespace Stars.Web.App_Start {
+namespace StartR.Web.App_Start {
     public static class StructuremapMvc {
         public static void Start() {
 			IContainer container = IoC.Initialize();

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Stars.Web
+namespace StartR.Web
 {
     public class BundleConfig
     {

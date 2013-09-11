@@ -1,9 +1,9 @@
 using ServiceStack.Api.Swagger;
 using ServiceStack.WebHost.Endpoints;
-using Stars.Web.Api;
+using StartR.Web.Api;
 
-[assembly: WebActivator.PreApplicationStartMethod(typeof(Stars.Web.App_Start.AppHost), "Start")]
-namespace Stars.Web.App_Start
+[assembly: WebActivator.PreApplicationStartMethod(typeof(StartR.Web.App_Start.AppHost), "Start")]
+namespace StartR.Web.App_Start
 {
     public class AppHost : AppHostBase
 	{		

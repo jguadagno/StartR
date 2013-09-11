@@ -16,10 +16,10 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 
-using Stars.Domain;
-using Stars.Web.Infrastructure;
+using StartR.Domain;
+using StartR.Web.Infrastructure;
 using StructureMap;
-namespace Stars.Web.DependencyResolution {
+namespace StartR.Web.DependencyResolution {
     public static class IoC {
         public static IContainer Initialize() {
             ObjectFactory.Initialize(x =>

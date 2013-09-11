@@ -1,4 +1,4 @@
-﻿namespace Stars.Web.App_Start
+﻿namespace StartR.Web.App_Start
 {
     using ServiceStack.Configuration;
 

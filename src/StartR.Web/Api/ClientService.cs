@@ -1,12 +1,12 @@
 ﻿using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface;
-using Stars.Domain;
+using StartR.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Stars.Web.Api
+namespace StartR.Web.Api
 {
     [Route("/clients", "GET", Summary=@"Gets all clients")]
     public class AllClients : IReturn<List<Client>> { }
