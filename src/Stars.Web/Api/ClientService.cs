@@ -8,7 +8,7 @@ using System.Web;
 
 namespace Stars.Web.Api
 {
-    [Route("/clients", Summary=@"Gets all clients")]
+    [Route("/clients", "GET", Summary=@"Gets all clients")]
     public class AllClients : IReturn<List<Client>> { }
 
     public class ClientService : Service

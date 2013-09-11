@@ -20,6 +20,7 @@ namespace Stars.Web.App_Start
 
             Plugins.Add(new SwaggerFeature());
 
+
             //TODO: Register your dependencies
             //ObjectFactory.Inject(typeof(IFoo), new Foo());
 
