@@ -209,9 +209,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Stars.mdf" />
-    <Content Include="App_Data\Stars_log.ldf">
-      <DependentUpon>Stars.mdf</DependentUpon>
+    <Content Include="App_Data\StartR.mdf" />
+    <Content Include="App_Data\StartR_log.ldf">
+      <DependentUpon>StartR.mdf</DependentUpon>
     </Content>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -367,7 +367,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>24451</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:29141/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
