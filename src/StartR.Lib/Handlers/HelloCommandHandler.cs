@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace StartR.Lib.Handlers
 {
-    public class HelloCommandHandler : IHandleCommand<HelloCommand>
+    public class QualifyNewClientCommandHandler : IHandler<QualifyNewClientCommand>
     {
-        public void Handle(HelloCommand command, Action completion)
+        public void Handle(QualifyNewClientCommand command, Action completion)
         {
-            Console.WriteLine(command.Message);
+            Console.WriteLine(command);
             if (completion != null) completion();
         }
     }

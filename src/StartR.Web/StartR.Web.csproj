@@ -46,6 +46,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -65,6 +71,9 @@
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\packages\RabbitMQ.Client.3.1.5\lib\net30\RabbitMQ.Client.dll</HintPath>
     </Reference>
     <Reference Include="ServiceStack">
       <HintPath>..\packages\ServiceStack.3.9.59\lib\net35\ServiceStack.dll</HintPath>
@@ -188,10 +197,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
+    <Reference Include="XSerializer">
+      <HintPath>..\packages\XSerializer.0.1.9\lib\net40\XSerializer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ClientService.cs" />
     <Compile Include="App_Start\AppHost.cs" />
+    <Compile Include="App_Start\AutoMapperMappings.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -205,7 +218,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\FakeMessageSender.cs" />
+    <Compile Include="Infrastructure\RabbitMQMessageSender.cs" />
     <Compile Include="Infrastructure\StartRDb.cs" />
+    <Compile Include="Infrastructure\XSerializer.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -355,6 +371,10 @@
     <ProjectReference Include="..\StartR.Domain\StartR.Domain.csproj">
       <Project>{5b9c60b4-8138-4e0d-b0d6-e8bac4b32d5a}</Project>
       <Name>StartR.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StartR.Lib\StartR.Lib.csproj">
+      <Project>{c1e3beeb-f0cc-456f-8b8d-649da7ff66a5}</Project>
+      <Name>StartR.Lib</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

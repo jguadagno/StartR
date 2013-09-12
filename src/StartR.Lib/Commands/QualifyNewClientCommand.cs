@@ -1,15 +1,14 @@
-﻿using System;
+﻿using StartR.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StartR.Lib.Messaging;
 
 namespace StartR.Lib.Commands
 {
-    public class HelloCommand : IMessage
+    public class QualifyNewClientCommand : Client
     {
-        public string Message { get; set; }
-    }    
+        public DateTime CreateDate { get; set; }
+    }
 }
-

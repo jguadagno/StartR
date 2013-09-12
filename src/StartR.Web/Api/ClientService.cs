@@ -1,7 +1,10 @@
-﻿using ServiceStack.Common.Web;
+﻿using AutoMapper;
+using ServiceStack.Common.Web;
 using ServiceStack.ServiceHost;
 using ServiceStack.ServiceInterface;
 using StartR.Domain;
+using StartR.Lib.Commands;
+using StartR.Lib.Messaging;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -17,9 +20,12 @@ namespace StartR.Web.Api
     public class ClientService : Service
     {
         private readonly IStartRDataSource _db;
-        public ClientService(IStartRDataSource db)
+        private readonly IMessageSender _sender;
+
+        public ClientService(IStartRDataSource db, IMessageSender sender)
         {
             _db = db;
+            _sender = sender;
         }
         public object Get(AllClients request)
         {
@@ -30,6 +36,10 @@ namespace StartR.Web.Api
         {
             ((DbSet<Client>)_db.Clients).Add(client);
             ((DbContext)_db).SaveChanges();
+
+            var cmd = Mapper.Map<QualifyNewClientCommand>(client);
+            _sender.Send<QualifyNewClientCommand>(cmd);
+
             return client.Id;
         }
 

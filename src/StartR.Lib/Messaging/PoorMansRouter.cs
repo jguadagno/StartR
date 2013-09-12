@@ -38,10 +38,10 @@ namespace StartR.Lib.Messaging
             
             switch (rootElement)
             {
-                case "HelloCommandHandler":
-                    XmlSerializer<HelloCommand> serializer = new XmlSerializer<HelloCommand>();
+                case "QualifyNewClientCommand":
+                    XmlSerializer<QualifyNewClientCommand> serializer = new XmlSerializer<QualifyNewClientCommand>();
                     var cmd = serializer.Deserialize(message);
-                    var handler = new HelloCommandHandler();
+                    var handler = new QualifyNewClientCommandHandler();
                     handler.Handle(cmd, completion);
                     break;
             }
@@ -50,7 +50,7 @@ namespace StartR.Lib.Messaging
 
         private void ScanAssemblies()
         {
-            var type = typeof(IHandleCommand<>);
+            var type = typeof(IHandler<>);
             var types = AppDomain.CurrentDomain.GetAssemblies().ToList()
                 .SelectMany(a => a.GetTypes())
                 .Where(t => t.IsGenericTypeOf(type));

@@ -6,8 +6,8 @@ using StartR.Lib.Messaging;
 
 namespace StartR.Lib.Messaging
 {
-    public interface IHandleCommand<T>
+    public interface IHandler<T>
     {
-        void Handle(T command, Action completion);
+        void Handle(T msg, Action completion);
     }
 }

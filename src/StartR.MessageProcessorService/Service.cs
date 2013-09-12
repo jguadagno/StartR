@@ -23,10 +23,10 @@ namespace StartR.MessageProcessorService
             {
                 using (var channel = connection.CreateModel())
                 {
-                    channel.QueueDeclare("hellodurable", true, false, false, null);
+                    channel.QueueDeclare("StartR", true, false, false, null);
 
                     var consumer = new QueueingBasicConsumer(channel);
-                    channel.BasicConsume("hello", false, consumer);
+                    channel.BasicConsume("StartR", false, consumer);
 
                     Console.WriteLine(" [*] Waiting for messages." +
                                              "To exit press CTRL+C");

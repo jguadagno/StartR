@@ -44,17 +44,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Commands\HelloCommand.cs" />
+    <Compile Include="Commands\QualifyNewClientCommand.cs" />
+    <Compile Include="Events\ClientCreatedEvent.cs" />
+    <Compile Include="Handlers\ClientCreatedEvent.cs" />
     <Compile Include="Handlers\HelloCommandHandler.cs" />
-    <Compile Include="Messaging\IHandleCommand.cs" />
+    <Compile Include="Messaging\IHandler.cs" />
     <Compile Include="Messaging\IMessageRouter.cs" />
     <Compile Include="Messaging\IMessage.cs" />
+    <Compile Include="Messaging\IMessageSender.cs" />
     <Compile Include="Messaging\PoorMansRouter.cs" />
     <Compile Include="Messaging\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StartR.Domain\StartR.Domain.csproj">
+      <Project>{5b9c60b4-8138-4e0d-b0d6-e8bac4b32d5a}</Project>
+      <Name>StartR.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
