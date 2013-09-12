@@ -9,9 +9,9 @@ namespace StartR.Domain
     public class Loan
     {
         public int Id { get; set; }
-        public decimal Amount { get; set; }
-        public decimal Ltv { get; set; }
-        public decimal InterestRate { get; set; }
-        public bool Approved { get; set; }
+        public decimal? Amount { get; set; }
+        public decimal? Ltv { get; set; }
+        public decimal? InterestRate { get; set; }
+        public bool? Approved { get; set; }
     }
 }

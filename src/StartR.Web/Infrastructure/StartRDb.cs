@@ -15,7 +15,7 @@ namespace StartR.Web.Infrastructure
 
         public StartRDb() : base("DefaultConnection")
         {
-
+            
         }
 
         IQueryable<Client> IStartRDataSource.Clients
@@ -32,5 +32,6 @@ namespace StartR.Web.Infrastructure
         {
             get { return Leads; }
         }
+
     }
 }
