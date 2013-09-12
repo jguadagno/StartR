@@ -12,6 +12,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartR.Domain", "StartR.Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartR.Web", "StartR.Web\StartR.Web.csproj", "{31FAA3D2-E2BB-4875-AC02-A015F9B88CF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartR.Lib", "StartR.Lib\StartR.Lib.csproj", "{C1E3BEEB-F0CC-456F-8B8D-649DA7FF66A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartR.MessageProcessorService", "StartR.MessageProcessorService\StartR.MessageProcessorService.csproj", "{618A8E8D-7A77-4A34-A00E-0F63332695E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{31FAA3D2-E2BB-4875-AC02-A015F9B88CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31FAA3D2-E2BB-4875-AC02-A015F9B88CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31FAA3D2-E2BB-4875-AC02-A015F9B88CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E3BEEB-F0CC-456F-8B8D-649DA7FF66A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E3BEEB-F0CC-456F-8B8D-649DA7FF66A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E3BEEB-F0CC-456F-8B8D-649DA7FF66A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E3BEEB-F0CC-456F-8B8D-649DA7FF66A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{618A8E8D-7A77-4A34-A00E-0F63332695E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{618A8E8D-7A77-4A34-A00E-0F63332695E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{618A8E8D-7A77-4A34-A00E-0F63332695E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{618A8E8D-7A77-4A34-A00E-0F63332695E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
