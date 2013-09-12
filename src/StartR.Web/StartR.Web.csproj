@@ -221,7 +221,6 @@
     <Compile Include="Infrastructure\FakeMessageSender.cs" />
     <Compile Include="Infrastructure\RabbitMQMessageSender.cs" />
     <Compile Include="Infrastructure\StartRDb.cs" />
-    <Compile Include="Infrastructure\XSerializer.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

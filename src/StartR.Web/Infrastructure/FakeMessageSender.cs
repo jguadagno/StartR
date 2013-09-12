@@ -8,9 +8,20 @@ namespace StartR.Web.Infrastructure
 {
     public class FakeMessageSender : IMessageSender
     {
+        private PoorMansRouter _router;
+
+        public FakeMessageSender()
+        {
+            _router = new PoorMansRouter();
+        }
 
         public void Send<T>(T msg)
         {
+            //_router.Route(msg, () =>
+            //{
+            //    // fire signalR
+            //    Console.WriteLine();
+            //});
             Console.WriteLine(msg);
         }
     }
