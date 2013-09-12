@@ -16,7 +16,5 @@ namespace StartR.Domain
         public virtual string City { get; set; }
         public virtual string State { get; set; }
         public virtual string Zip { get; set; }
-        public virtual int CreditScore { get; set; }
-        public decimal DTIR { get; set; }
     }
 }

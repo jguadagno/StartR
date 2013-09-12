@@ -1,5 +1,6 @@
 using ServiceStack.Api.Swagger;
 using ServiceStack.WebHost.Endpoints;
+using StartR.Domain;
 using StartR.Web.Api;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(StartR.Web.App_Start.AppHost), "Start")]
@@ -20,6 +21,7 @@ namespace StartR.Web.App_Start
 
             Plugins.Add(new SwaggerFeature());
 
+            Routes.Add<Client>("/clients", "POST");
 
             //TODO: Register your dependencies
             //ObjectFactory.Inject(typeof(IFoo), new Foo());
