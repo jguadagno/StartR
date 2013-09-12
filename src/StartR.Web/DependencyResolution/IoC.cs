@@ -30,7 +30,7 @@ namespace StartR.Web.DependencyResolution {
                                         scan.WithDefaultConventions();
                                     });
                             x.For<IStartRDataSource>().Use<StartRDb>();
-                            x.For<StartR.Lib.Messaging.IMessageSender>().Use<FakeMessageSender>();
+                            x.For<StartR.Lib.Messaging.IMessageSender>().Use<InMemoryMessageSender>();
                         });
             return ObjectFactory.Container;
         }

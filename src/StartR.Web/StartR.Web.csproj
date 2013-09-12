@@ -237,6 +237,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\ClientQualificationHub.cs" />
     <Compile Include="Infrastructure\FakeMessageSender.cs" />
     <Compile Include="Infrastructure\RabbitMQMessageSender.cs" />
     <Compile Include="Infrastructure\StartRDb.cs" />
@@ -356,6 +357,7 @@
     <Content Include="docs\lib\underscore-min.js" />
     <Content Include="docs\swagger-ui.js" />
     <Content Include="docs\swagger-ui.min.js" />
+    <Content Include="Scripts\SignalR.Qualification.js" />
     <Content Include="SignalR.Sample\SignalR.StockTicker.js" />
     <Content Include="SignalR.Sample\StockTicker.css" />
     <Content Include="SignalR.Sample\StockTicker.html" />

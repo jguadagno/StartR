@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 
 namespace StartR.Web.Api
@@ -38,7 +39,12 @@ namespace StartR.Web.Api
             ((DbContext)_db).SaveChanges();
 
             var cmd = Mapper.Map<QualifyNewClientCommand>(client);
-            _sender.Send<QualifyNewClientCommand>(cmd);
+            Task.Factory.StartNew(() =>
+                {
+                    _sender.Send<QualifyNewClientCommand>(cmd);
+                }
+        );
+            
 
             return client.Id;
         }

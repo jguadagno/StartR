@@ -6,6 +6,10 @@
 
 <h2>Details</h2>
 
+<div id="qualification">
+    
+</div>
+
 <fieldset>
     <legend>Client</legend>
 
@@ -63,3 +67,10 @@
     @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
     @Html.ActionLink("Back to List", "Index", "Home")
 </p>
+
+@section scripts
+{
+    <script src="~/Scripts/jquery.signalR-1.1.3.js"></script>
+    <script src="/signalr/hubs"></script>
+    <script src="~/Scripts/SignalR.Qualification.js"></script>
+}

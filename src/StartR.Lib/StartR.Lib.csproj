@@ -47,7 +47,7 @@
     <Compile Include="Commands\QualifyNewClientCommand.cs" />
     <Compile Include="Events\ClientCreatedEvent.cs" />
     <Compile Include="Handlers\ClientCreatedEvent.cs" />
-    <Compile Include="Handlers\HelloCommandHandler.cs" />
+    <Compile Include="Handlers\QualifyNewClientCommandHandler.cs" />
     <Compile Include="Messaging\IHandler.cs" />
     <Compile Include="Messaging\IMessageRouter.cs" />
     <Compile Include="Messaging\IMessage.cs" />
