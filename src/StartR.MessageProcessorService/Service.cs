@@ -27,7 +27,6 @@ namespace StartR.MessageProcessorService
 
                     var consumer = new QueueingBasicConsumer(channel);
                     channel.BasicConsume("StartR", false, consumer);
-
                     Console.WriteLine(" [*] Waiting for messages." +
                                              "To exit press CTRL+C");
                     while (true)

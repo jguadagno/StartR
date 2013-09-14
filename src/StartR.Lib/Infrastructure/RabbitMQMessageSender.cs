@@ -40,7 +40,7 @@ namespace StartR.Lib.Infrastructure
         {
             XmlSerializer<T> ser = new XmlSerializer<T>();
             var body = Encoding.UTF8.GetBytes(ser.Serialize(msg));
-            s_channel.BasicPublish("", msg.GetType().FullName, null, body);
+            s_channel.BasicPublish("", "StartR", null, body);
         }
 
         ~RabbitMQMessageSender()

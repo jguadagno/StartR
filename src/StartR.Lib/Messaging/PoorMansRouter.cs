@@ -34,7 +34,7 @@ namespace StartR.Lib.Messaging
         public void Route(string message, Action completion)
         {
             XDocument msg = XDocument.Parse(message);
-            var rootElement = msg.Elements().FirstOrDefault().Name + "Handler";
+            var rootElement = msg.Elements().FirstOrDefault().Name.ToString(); 
             
             switch (rootElement)
             {
