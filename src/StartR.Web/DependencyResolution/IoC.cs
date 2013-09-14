@@ -17,6 +17,7 @@
 
 
 using StartR.Domain;
+using StartR.Lib.Infrastructure;
 using StartR.Web.Infrastructure;
 using StructureMap;
 namespace StartR.Web.DependencyResolution {
@@ -29,8 +30,8 @@ namespace StartR.Web.DependencyResolution {
                                         scan.TheCallingAssembly();
                                         scan.WithDefaultConventions();
                                     });
-                            x.For<IStartRDataSource>().Use<StartRDb>();
-                            x.For<StartR.Lib.Messaging.IMessageSender>().Use<InMemoryMessageSender>();
+                            x.For<IStartRDataSource>().HttpContextScoped().Use<StartRDb>();
+                            x.For<StartR.Lib.Messaging.IMessageSender>().Use<RabbitMQMessageSender>();
                         });
             return ObjectFactory.Container;
         }

@@ -239,7 +239,6 @@
     </Compile>
     <Compile Include="Hubs\ClientQualificationHub.cs" />
     <Compile Include="Infrastructure\FakeMessageSender.cs" />
-    <Compile Include="Infrastructure\RabbitMQMessageSender.cs" />
     <Compile Include="Infrastructure\StartRDb.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,7 +12,7 @@ namespace StartR.Lib.Handlers
     {
         public void Handle(QualifyNewClientCommand command, Action completion)
         {
-            Console.WriteLine(command);
+            Console.WriteLine("Qualifying new client " + command.Id + ":" + command.FirstName + ":" + command.LastName);
             if (completion != null) completion();
         }
     }

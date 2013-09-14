@@ -4,10 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web;
 using XSerializer;
 
-namespace StartR.Web.Infrastructure
+namespace StartR.Lib.Infrastructure
 {
     public class RabbitMQMessageSender : IMessageSender
     {
@@ -15,12 +16,23 @@ namespace StartR.Web.Infrastructure
         private static IModel s_channel;
         private static IConnection s_connection;
 
-        public RabbitMQMessageSender()
+        private static void Initialize()
         {
             s_factory = new ConnectionFactory() { HostName = "localhost" };
             s_connection = s_factory.CreateConnection();
             s_channel = s_connection.CreateModel();
             s_channel.QueueDeclare("StartR", true, false, false, null);
+            s_connection.ConnectionShutdown += s_connection_ConnectionShutdown;
+        }
+        static RabbitMQMessageSender()
+        {
+            Initialize();
+        }
+
+        static void s_connection_ConnectionShutdown(IConnection connection, ShutdownEventArgs reason)
+        {
+            s_connection.ConnectionShutdown -= s_connection_ConnectionShutdown;
+            Initialize();
         }
 
 

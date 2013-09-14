@@ -9,11 +9,11 @@ using System.Threading;
 
 namespace StartR.Web.Infrastructure
 {
-    public class InMemoryMessageSender : IMessageSender
+    public class FakeMessageSender : IMessageSender
     {
         private PoorMansRouter _router;
 
-        public InMemoryMessageSender()
+        public FakeMessageSender()
         {
             _router = new PoorMansRouter();
         }
