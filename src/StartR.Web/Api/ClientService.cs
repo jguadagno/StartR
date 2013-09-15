@@ -30,7 +30,7 @@ namespace StartR.Web.Api
         }
         public object Get(AllClients request)
         {
-            return _db.Clients;
+            return _db.Clients.OrderBy(m=>m.LastName);
         }
 
         public object Post(Client client)

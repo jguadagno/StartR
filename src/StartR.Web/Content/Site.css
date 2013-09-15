@@ -99,9 +99,10 @@ h5, h6 {
 }
 
 #body {
-    background-color: #efeeef;
+    background-color: #FFF;
     clear: both;
     padding-bottom: 35px;
+    padding-top: 40px;
 }
 
     .main-content {
@@ -114,7 +115,7 @@ h5, h6 {
         background: url("../Images/heroAccent.png") no-repeat;
     }
 
-header .content-wrapper {
+header .content-wrapper {    
     padding-top: 20px; 
 }
 
