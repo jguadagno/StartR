@@ -13,7 +13,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("S.t.a.r.t.R", "Index", "Home")</p>
+                    <span class="site-title"><a href="/">S.t.a.r.t.R</a></span>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -21,9 +21,8 @@
                     </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/home/about">About</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -31,14 +30,14 @@
         </header>
         <div id="body">
             @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
+            <section class="content-wrapper main-content clear-fix row-fluid">
                 @RenderBody()
             </section>
         </div>
         <footer>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                <div class="float-right">
+                    <p>S.t.a.r.t.R</p>
                 </div>
             </div>
         </footer>

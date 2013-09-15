@@ -6,27 +6,21 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "create", "client")
-</p>
-<table id="Clients">
-</table>
+<p><a class="btn btn-default" href="/client/create"><i class="icon-plus"></i>&nbsp;Create New</a></p><br/>
+<div id="Clients">
+    <i id="spinner" class="icon-spinner icon-spin icon-large"></i> Loading content...
+</div>
 
 @section scripts
 {
-    <script type="text/javascript">
-        
+    <script type="text/javascript">        
         $(document).ready(function () {
             $.getJSON('/api/clients', function (response) {
                 var html = '';
-
-                $.each(response, function (idx, d) {                    
-                    html += '<tr>';
-                    html += '<td>' + d.firstName + '</td>';
-                    html += '<td><a href=\'/home/delete/' + d.id + '\'>Delete</a> | <a href=\'/client/details/' + d.id + '\'>View Client</a> </td>';
-                    html += '</tr>';
+                $.each(response, function (idx, d) {
+                    html += '<span> <a href=\'/client/details/' + d.id + '\'>' + d.lastName + ', ' + d.firstName + '</a></span><br>';
                 });
-                $('#Clients').append(html);
+                $('#Clients').html(html);
             });
             
         });
