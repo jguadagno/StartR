@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Client.cs" />
     <Compile Include="ClientQualification.cs" />
+    <Compile Include="IEntity.cs" />
     <Compile Include="IStartRDataSource.cs" />
     <Compile Include="Lead.cs" />
     <Compile Include="Loan.cs" />

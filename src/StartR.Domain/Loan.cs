@@ -1,12 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StartR.Domain
 {
-    public class Loan
+    public class Loan : IEntity
     {
         public int Id { get; set; }
         public decimal? Amount { get; set; }

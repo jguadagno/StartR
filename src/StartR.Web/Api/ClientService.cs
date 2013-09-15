@@ -15,7 +15,7 @@ using System.Web;
 
 namespace StartR.Web.Api
 {
-    [Route("/clients", "GET", Summary=@"Gets all clients")]
+    [Route("/clients", "GET", Summary = @"Gets all clients")]
     public class AllClients : IReturn<List<Client>> { }
 
     public class ClientService : Service
@@ -40,11 +40,11 @@ namespace StartR.Web.Api
 
             var cmd = Mapper.Map<QualifyNewClientCommand>(client);
             Task.Factory.StartNew(() =>
-                {
-                    _sender.Send<QualifyNewClientCommand>(cmd);
-                }
-        );
-            
+                    {
+                        _sender.Send<QualifyNewClientCommand>(cmd);
+                    }
+                );
+
 
             return client.Id;
         }

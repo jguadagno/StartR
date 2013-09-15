@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using StartR.Lib.Messaging;
+using System.Threading.Tasks;
 
 namespace StartR.Lib.Messaging
 {
-    public interface IHandler<T>
+    public interface ICommand
     {
-        void Handle(T msg, Action completion);
     }
 }

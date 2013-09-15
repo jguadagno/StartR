@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StartR.Domain
 {
-    public class Client
+    public class Client : IEntity
     {
         public virtual int Id { get; set; }
         public virtual string FirstName { get; set; }

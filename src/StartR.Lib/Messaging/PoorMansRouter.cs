@@ -1,4 +1,5 @@
-﻿using StartR.Lib.Commands;
+﻿using StartR.Domain;
+using StartR.Lib.Commands;
 using StartR.Lib.Handlers;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace StartR.Lib.Messaging
 
         public PoorMansRouter()
         {
-            ScanAssemblies();
+            
         }
 
         public void Route<T>(T msg) where T : class, IMessage
@@ -31,7 +32,7 @@ namespace StartR.Lib.Messaging
         }
 
 
-        public void Route(string message, Action completion)
+        public void Route(string message, Action<IEntity> completion)
         {
             XDocument msg = XDocument.Parse(message);
             var rootElement = msg.Elements().FirstOrDefault().Name.ToString(); 
@@ -48,17 +49,10 @@ namespace StartR.Lib.Messaging
             
         }
 
-        private void ScanAssemblies()
-        {
-            var type = typeof(IHandler<>);
-            var types = AppDomain.CurrentDomain.GetAssemblies().ToList()
-                .SelectMany(a => a.GetTypes())
-                .Where(t => t.IsGenericTypeOf(type));
-            foreach (var item in types)
-            {
-                _types.Add(item);
-            }
-        }
 
+        public void Route(string message, Action completion)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

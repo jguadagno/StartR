@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StartR.Lib.Commands
 {
-    public class QualifyNewClientCommand : Client, IMessage
+    public class QualifyNewClientCommand : Client, ICommand
     {
         public DateTime CreateDate { get; set; }
     }

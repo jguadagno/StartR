@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace StartR.Lib.Events
 {
-    public class ClientCreatedEventHandler : IHandler<ClientCreatedEvent>
+    public class ClientCreatedEventHandler : IHandle<ClientCreatedEvent>
     {
 
         public void Handle(ClientCreatedEvent msg, Action completion)
         {
-            throw new NotImplementedException();
+            if (completion != null)
+                completion();
         }
     }
 }

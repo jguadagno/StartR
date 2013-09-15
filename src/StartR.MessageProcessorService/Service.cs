@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using Microsoft.AspNet.SignalR.Client.Hubs;
+using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using StartR.Lib.Messaging;
 using System;
@@ -13,11 +14,18 @@ namespace StartR.MessageProcessorService
     }
     public class Service : IService 
     {
+        private HubConnection _cn;
+        private IHubProxy _proxy;
         private PoorMansRouter _Router;
         public void Start()
         {
             _Router = new PoorMansRouter();
 
+            _cn = new HubConnection("http://localhost:29141/");
+
+            _proxy = _cn.CreateHubProxy("qualification");
+            _cn.Start();
+           
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using (var connection = factory.CreateConnection())
             {
@@ -37,9 +45,10 @@ namespace StartR.MessageProcessorService
                         var body = ea.Body;
                         var message = Encoding.UTF8.GetString(body);
                         Console.WriteLine("Messaged received: " + message.Substring(0, 25));
-                        _Router.Route(message, () =>
+                        _Router.Route(message, (obj) =>
                         {
                             channel.BasicAck(ea.DeliveryTag, false);
+                            _proxy.Invoke("updateQualification", obj);
                         });
                     }
                 }
