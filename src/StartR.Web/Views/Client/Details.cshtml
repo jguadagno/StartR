@@ -17,7 +17,7 @@
 }
 @Html.DisplayFor(model => model.City),&nbsp;@Html.DisplayFor(model => model.State)<br/>
 @Html.DisplayFor(model => model.Zip)<br/><br/>
-<span><a href="/edit/@Model.Id">Back to List</a> | <a href="/">Back to List</a></span>
+<span><a href="/edit/@Model.Id">Edit</a> | <a href="/">Back to List</a></span>
 
 @section scripts
 {
@@ -25,7 +25,9 @@
     <script src="/signalr/hubs"></script>
     <script src="~/Scripts/SignalR.Qualification.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
+            $('.navbuttons').removeClass('active');
+            $('#nav_home').addClass('active');
             SignalRInit('@Model.Id');
         });
     </script>
